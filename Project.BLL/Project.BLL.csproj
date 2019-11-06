@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignPatterns\RepositoryPattern\BaseRep\BaseRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\AppUserDetailRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\AppUserRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\CategoryRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderDetailRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\OrderRepository.cs" />
+    <Compile Include="DesignPatterns\RepositoryPattern\ConcRep\ProductRepository.cs" />
     <Compile Include="DesignPatterns\RepositoryPattern\IntRep\IRepository.cs" />
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,9 +63,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DesignPatterns\RepositoryPattern\ConcRep\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Project.COMMON\Project.COMMON.csproj">
       <Project>{07027027-57b9-4383-bae1-7d11cca98745}</Project>
