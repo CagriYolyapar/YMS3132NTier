@@ -41,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AppUser.cs" />
+    <Compile Include="Entities\AppUserDetail.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderDetail.cs" />
+    <Compile Include="Entities\Product.cs" />
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

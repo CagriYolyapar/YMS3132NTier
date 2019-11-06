@@ -125,6 +125,7 @@
     <Folder Include="Areas\Administrator\Models\" />
     <Folder Include="Areas\Administrator\Views\Shared\" />
     <Folder Include="Controllers\" />
+    <Folder Include="OuterTools\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
