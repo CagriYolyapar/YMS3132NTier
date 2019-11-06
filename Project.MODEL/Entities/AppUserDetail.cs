@@ -12,6 +12,9 @@ namespace Project.MODEL.Entities
 
         public string LastName { get; set; }
 
+        public string Address { get; set; }
+
+
         //Relational Properties
 
         public virtual AppUser AppUser { get; set; }
