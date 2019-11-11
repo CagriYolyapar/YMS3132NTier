@@ -53,10 +53,6 @@ namespace Project.COMMON.MyTools
                 {
                     return "Arkadasım niye resim secmedin?";
                 }
-
-
-
-
             }
             else
             {
