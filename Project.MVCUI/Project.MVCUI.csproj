@@ -1753,6 +1753,9 @@
     <Content Include="OuterTools\FlatAdmin\xchart.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Administrator\Views\AdminCategory\CategoryList.cshtml" />
+    <Content Include="Areas\Administrator\Views\AdminProduct\AddProduct.cshtml" />
+    <Content Include="Areas\Administrator\Views\AdminProduct\ProductList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1763,6 +1766,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Administrator\AdministratorAreaRegistration.cs" />
     <Compile Include="Areas\Administrator\Controllers\AdminCategoryController.cs" />
+    <Compile Include="Areas\Administrator\Controllers\AdminProductController.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="Authentication\AdminAuthentication.cs" />
