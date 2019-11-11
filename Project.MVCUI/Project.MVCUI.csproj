@@ -1769,7 +1769,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Administrator\AdministratorAreaRegistration.cs" />
     <Compile Include="Areas\Administrator\Controllers\AdminCategoryController.cs" />
+    <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="Authentication\AdminAuthentication.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1942,6 +1945,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1952,7 +1956,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administrator\Models\" />
-    <Folder Include="Controllers\" />
     <Folder Include="OuterTools\FlatAdmin\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
   <ItemGroup>
