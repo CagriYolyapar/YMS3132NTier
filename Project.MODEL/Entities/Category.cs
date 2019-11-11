@@ -16,6 +16,9 @@ namespace Project.MODEL.Entities
 
         public virtual List<Product> Products { get; set; }
 
-
+        public Category()
+        {
+            Products = new List<Product>();
+        }
     }
 }
