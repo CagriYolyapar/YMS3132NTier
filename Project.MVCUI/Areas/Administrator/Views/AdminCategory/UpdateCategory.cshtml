@@ -10,43 +10,24 @@
                 Kategori Ekleme Sayfası
             </header>
             <div class="panel-body">
-                <div class=" form">
-                    @*<form class="cmxform form-horizontal tasi-form" id="commentForm" method="post" action="/Administrator/AdminCategory/AddCategory">
-                        @Html.HiddenFor(x=>x.ID)
-                        <div class="form-group ">
-                           
-                            <label for="cname" class="control-label col-lg-2">Kategori Adı</label>
-                            <div class="col-lg-10">
-                               @Html.TextBoxFor(x=>x.CategoryName)
-                            </div>
-                        </div>
+                <div class=" form form-control">
+                
+                    @using (Html.BeginForm("UpdateCategory", "AdminCategory", FormMethod.Post))
+                    {
+                        @Html.HiddenFor(x => x.ID)
 
-                        <div class="form-group ">
-                            <label for="cname" class="control-label col-lg-2">Kategori Açıklaması</label>
-                            <div class="col-lg-10">
-                                <input class=" form-control" id="cd" name="Description" minlength="2" type="text" required />
-                            </div>
-                        </div>
+                        @Html.TextBoxFor(x => x.CategoryName, new { @class="form form-control"})<br />
+
+                        @Html.TextBoxFor(x => x.Description, new { @class = "form form-control" })
+
+                        <button class="btn btn-info">Kaydet</button>
 
 
-                        <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                                <button class="btn btn-danger" type="submit">Kaydet</button>
+                    }
 
-                            </div>
-                        </div>
-
-                    </form>*@
                 </div>
 
-                @using (Html.BeginForm("UpdateCategory", "AdminCategory", FormMethod.Post))
-                {
-                    @Html.HiddenFor(x=>x.ID)
-
-                    @Html.TextBoxFor(x=>x.CategoryName)
-
-                    @Html.TextBoxFor(x=>x.Description)
-                }
+               
 
             </div>
         </section>
