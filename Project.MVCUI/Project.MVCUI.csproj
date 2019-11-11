@@ -1759,6 +1759,8 @@
     <Content Include="OuterTools\FlatAdmin\xchart.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Administrator\Views\AdminCategory\AddCategory.cshtml" />
+    <Content Include="Areas\Administrator\Views\AdminCategory\UpdateCategory.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
