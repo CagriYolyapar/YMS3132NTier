@@ -1753,7 +1753,6 @@
     <Content Include="OuterTools\FlatAdmin\xchart.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Administrator\Views\AdminProduct\ProductList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1790,11 +1789,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administrator\Controllers\" />
     <Folder Include="Areas\Administrator\Models\" />
     <Folder Include="Areas\Administrator\Views\Shared\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="OuterTools\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
