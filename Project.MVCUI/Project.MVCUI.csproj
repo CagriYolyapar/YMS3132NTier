@@ -1807,6 +1807,9 @@
     <Content Include="Views\Member\ProductList.cshtml" />
     <Content Include="Views\Member\CartPage.cshtml" />
     <Content Include="Views\Member\SiparisiOnayla.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

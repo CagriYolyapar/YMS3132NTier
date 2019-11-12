@@ -1,5 +1,5 @@
 ﻿
-@model Tuple<AppUser, AppUserDetail>
+@model AppUser
 @{
     Layout = null;
 }
@@ -41,11 +41,11 @@
 
 
 
-        @using (Html.BeginForm("Register", "Home", FormMethod.Post, new { @class = "form-signin" }))
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "form-signin" }))
         {
-            <h1 style="color:red"> @ViewBag.ZatenVar </h1>
+            
             <h1 style="color:green">@TempData["HesapAktif"]</h1>
-            <h2 class="form-signin-heading">registration now</h2>
+            <h2 class="form-signin-heading">Üye Girişi</h2>
             <div class="login-wrap">
                 <p>Lutfen hesap bilgilerinizi giriniz</p>
 
@@ -53,35 +53,27 @@
 
 
 
-                @Html.TextBoxFor(x => x.Item1.UserName, new { @class = "form-control", placeholder = "Kullanıcı ismi giriniz" })
+                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "Kullanıcı ismi giriniz" })
 
 
 
 
 
 
-                @Html.TextBoxFor(x => x.Item1.Password, new { @class = "form-control", placeholder = "Sifre" })
+                @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "Sifre" })
 
 
 
 
 
-                @Html.TextBoxFor(x => x.Item1.Email, new { @class = "form-control", placeholder = "Email Adresi" })
+               
 
-                <p> Profil bilgilerinizi giriniz(zorunlu degildir sonra da olusturabilirsiniz)</p>
-                <p style="color:green"> @Html.ViewBag.mailOnay</p>
+                
 
-                @Html.TextBoxFor(x => x.Item2.FirstName, new { @class = "form-control", placeholder = "İsminiz" })
-
-                @Html.TextBoxFor(x => x.Item2.LastName, new { @class = "form-control", placeholder = "Soyismini" })
-
-
-                @Html.TextAreaFor(x => x.Item2.Address, new { @class = "form-control", placeholder = "Adresiniz" }) <br />
-
-                <button class="btn btn-lg btn-login btn-block">Submit</button>
+                <button class="btn btn-lg btn-login btn-block">Giriş Yap</button>
                 <div class="registration">
-                    Already Registered.
-                    @Html.ActionLink("Login", "Login")
+                    Kayıt Ol
+                    @Html.ActionLink("Register", "Register")
 
                 </div>
             </div>
