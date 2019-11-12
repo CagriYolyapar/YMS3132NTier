@@ -1,4 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.RepositoryPattern.ConcRep;
+using Project.COMMON.MyTools;
 using Project.MODEL.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,28 +11,31 @@ namespace Project.MVCUI.Areas.Administrator.Controllers
 {
     public class AdminProductController : Controller
     {
-        ProductRepository prep;
+        ProductRepository pRep;
+        CategoryRepository cRep;
 
         public AdminProductController()
         {
-            prep = new ProductRepository();
+            cRep = new CategoryRepository();
+            pRep = new ProductRepository();
         }
         // GET: Administrator/AdminProduct
         public ActionResult ProductList()
         {
-            return View(prep.GetAll());
+            return View(pRep.GetAll());
         }
 
         public ActionResult AddProduct()
         {
-            return View();
+            return View(Tuple.Create(new Product(),cRep.GetActives()));
         }
 
         [HttpPost]
-        public ActionResult AddProduct(Product item)
+        public ActionResult AddProduct([Bind(Prefix ="Item1")] Product item,HttpPostedFileBase resim)
         {
-            prep.Add(item);
-            return RedirectToAction("ListProduct");
+            item.ImagePath = ImageUploader.UploadImage("~/Pictures/", resim);
+            pRep.Add(item);
+            return RedirectToAction("ProductList");
         }
 
         public ActionResult UpdateProduct()
@@ -44,18 +48,18 @@ namespace Project.MVCUI.Areas.Administrator.Controllers
         [HttpPost]
         public ActionResult UpdateProduct(Product item)
         {
-            Product guncellenecek = prep.Find(item.ID);
+            Product guncellenecek = pRep.Find(item.ID);
             guncellenecek.ProductName = item.ProductName;
             guncellenecek.UnitPrice = item.UnitPrice;
             guncellenecek.UnitsInStock = item.UnitsInStock;
-            prep.Update(item);
-            return RedirectToAction("ListProduct");
+            pRep.Update(item);
+            return RedirectToAction("ProductList");
         }
 
         public ActionResult DeleteProduct(int id)
         {
-            prep.Delete(prep.Find(id));
-            return RedirectToAction("ListProduct");
+            pRep.Delete(pRep.Find(id));
+            return RedirectToAction("ProductList");
         }
     }
 }

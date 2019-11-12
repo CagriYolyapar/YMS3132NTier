@@ -12,6 +12,8 @@ namespace Project.MODEL.Entities
 
         public int ProductID { get; set; }
 
+
+        //Buraya ek olarak Total Price eklensin
         //Relational Properties
 
         public virtual Product Product { get; set; }
