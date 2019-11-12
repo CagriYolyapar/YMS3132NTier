@@ -18,10 +18,7 @@ namespace Project.BLL.RepositoryPattern.ConcRep
                 return "Boyle bir kullanici var";
 
             }
-            AppUser ap = new AppUser();
-            ap.UserName = userName;
-            ap.Email = email;
-            db.AppUsers.Add(ap);
+            
             varMi = false;
             return "Kullanici Eklendi";
         }
